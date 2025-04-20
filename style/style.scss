@@ -1,0 +1,66 @@
+body{
+    background-color: coral;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    background-color: burlywood;
+    border: solid 2px wheat;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    #title{
+        margin-top: 10px;
+        font-size: 32px;
+    }
+    .input-form{
+        margin-top: 20px;
+        display: flex;
+        align-items: center; 
+        gap: 10px;
+
+        #inputText{
+            padding: 10px 40px;
+            line-height: 1;
+            border: 1px solid #ccc;
+            outline: none;
+            box-sizing: border-box;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        #getWeather{
+            border-radius: 10px;
+            padding: 5px;
+            width: 60px;
+            line-height: 1;
+            border: 1px solid #ccc;
+            outline: none;
+            box-sizing: border-box;
+            font-size: 16px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    #result{
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .input-form{
+        flex-direction: column;
+        
+    }
+        #getWeather{
+            width: 100px;
+        }
+    
+    
+}
