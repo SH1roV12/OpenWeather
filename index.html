@@ -13,16 +13,17 @@
 </head>
 <body>
     <div class="container">
-        <span id="title">Узнать погоду сейчас</span>
-        <form class="input-form">
-        <input type="text" placeholder="Введите город" id="inputText">
-        <button id="getWeather" type="submit">Узнать погоду</button>
+        <span class="container__title">Узнать погоду сейчас</span>
+        <form class="container__form form">
+            <input type="text" placeholder="Введите город" class="form__inputText">
+            <button class="form__getWeather" type="submit">Узнать погоду</button>
         </form>
-        <div id="result">
-            <h2 id="result__city-name"></h2>
-            <p id="result__temp"></p>
-            <p id="result__wind"></p>
-            <img id="icon" src="" alt="" />
+        
+        <div class="container__result result">
+            <h2 class="result__city-name"></h2>
+            <p class="result__temp"></p>
+            <p class="result__wind"></p>
+            <img class="result__icon" src="" alt="" />
         </div>
     </div>
 </body>

@@ -13,17 +13,17 @@ body{
     border: solid 2px wheat;
     border-radius: 5px;
     flex-wrap: wrap;
-    #title{
+    .container__title{
         margin-top: 10px;
         font-size: 32px;
     }
-    .input-form{
+    .container__form{
         margin-top: 20px;
         display: flex;
         align-items: center; 
         gap: 10px;
 
-        #inputText{
+        .form__inputText{
             padding: 10px 40px;
             line-height: 1;
             border: 1px solid #ccc;
@@ -31,8 +31,11 @@ body{
             box-sizing: border-box;
             font-size: 20px;
             border-radius: 10px;
+            &:focus{
+                border: 2px solid rgb(0, 0, 0);
+            }
         }
-        #getWeather{
+        .form__getWeather{
             border-radius: 10px;
             padding: 5px;
             width: 60px;
@@ -41,26 +44,49 @@ body{
             outline: none;
             box-sizing: border-box;
             font-size: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             &:hover{
                 cursor: pointer;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+            }
+            &:active{
+                transform: translate(2px, 3px);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
             }
         }
+
+        @media (max-width: 700px){
+            &{
+                flex-direction: column;
+                
+            }
+                .form__getWeather{
+                    width: 300px;
+                    height: 45px;
+                    font-size: 22px;
+                }
+            
+            
+        }
     }
-    #result{
+    .container__result{
         text-align: center;
         margin-top: 10px;
         width: 100%;
     }
+
+    
+
+
+    @media(max-width: 400px){
+        .container__title{
+            font-size: 25px;
+        }
+        .form__inputText{
+            max-width: 250px;
+        }
+
+    }
 }
 
-@media (max-width: 500px){
-    .input-form{
-        flex-direction: column;
-        
-    }
-        #getWeather{
-            width: 100px;
-        }
-    
-    
-}
+
